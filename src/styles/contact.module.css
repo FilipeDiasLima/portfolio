@@ -1,0 +1,9 @@
+.cardContact:hover .image {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.cardContact:hover .text {
+  opacity: 1;
+  transition: all 0.3s;
+}
