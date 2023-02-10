@@ -1,19 +1,27 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import { theme } from "@/theme";
+import { ColorModeScript } from "@chakra-ui/color-mode";
+import { Html, Head, Main, NextScript } from "next/document";
 
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html>
-        <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&display=swap" rel="stylesheet" />
-        </Head>
-        <body>
-          <Main />
-          <NextScript></NextScript>
-        </body>
-      </Html>
-    )
-  }
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <body>
+        <ColorModeScript initialColorMode={theme.initialColorMode} />
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }

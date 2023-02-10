@@ -1,13 +1,15 @@
-import { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
-import { theme } from '../styles/theme'
+import { ChakraProvider } from "@chakra-ui/react";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
+import { NavBar } from "@/components/NavBar";
+import { theme } from "@/theme";
+
+export default function App({ Component, pageProps }: AppProps) {
+  console.log(theme.initialColorMode);
   return (
     <ChakraProvider theme={theme}>
+      <NavBar />
       <Component {...pageProps} />
     </ChakraProvider>
-  )
+  );
 }
-
-export default MyApp
