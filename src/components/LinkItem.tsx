@@ -3,23 +3,12 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { container } from "@/animations/variants";
 
 interface LinkItemProps extends LinkProps {
   href: string;
   children?: ReactNode;
 }
-
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-    },
-  },
-};
 
 export const LinkItem = ({ href, children, ...rest }: LinkItemProps) => {
   const router = useRouter();

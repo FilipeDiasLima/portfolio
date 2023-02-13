@@ -17,6 +17,7 @@ export const NavBar = () => {
   return (
     <Box
       position="fixed"
+      top={0}
       as="nav"
       w="100%"
       zIndex={2}

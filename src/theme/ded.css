@@ -1,0 +1,7 @@
+poe {
+  color: #43ba7ac0;
+}
+
+.grid-item-thumbnail:hover {
+  transform: scale(1.2);
+}
