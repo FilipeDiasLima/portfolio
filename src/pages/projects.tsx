@@ -18,25 +18,25 @@ const Projects = () => {
           <SimpleGrid columns={[1, 1, 2]} gap={4} mt={6}>
             <ProjectCard
               title="GGstore"
-              description="Este projeto foi desenvolvido para ser uma loja online de jogos virtuais, a loja se baseia na venda de keys dos jogos disponíveis. Conta com um administrado para cadastrar novos produtos com imagens e descrição e conta com um usuário comum, que será o comprador."
+              description="Este projeto foi desenvolvido para ser uma loja online de jogos virtuais, a loja se baseia na venda de keys dos jogos disponíveis."
               image="ggstore.svg"
               url="/ggstore"
             />
             <ProjectCard
               title="IgniteGym"
-              description="Este projeto foi desenvolvido para ser uma loja online de jogos virtuais, a loja se baseia na venda de keys dos jogos disponíveis. Conta com um administrado para cadastrar novos produtos com imagens e descrição e conta com um usuário comum, que será o comprador."
+              description="Um app para você montar seu treino diário, escolhendo o dia, os exercícios e suas séries."
               image="ignitegym.svg"
               url="/ignitegym"
             />
             <ProjectCard
               title="Simple Note"
-              description="Este projeto foi desenvolvido para ser uma loja online de jogos virtuais, a loja se baseia na venda de keys dos jogos disponíveis. Conta com um administrado para cadastrar novos produtos com imagens e descrição e conta com um usuário comum, que será o comprador."
+              description="Este app ajuda você a fazer suas anotações de forma simles e bonita. App simples e agradável para estudos."
               image="simplenote.svg"
               url="/simplenote"
             />
             <ProjectCard
               title="Typing Text"
-              description="Este projeto foi desenvolvido para ser uma loja online de jogos virtuais, a loja se baseia na venda de keys dos jogos disponíveis. Conta com um administrado para cadastrar novos produtos com imagens e descrição e conta com um usuário comum, que será o comprador."
+              description="Essa aplicação web testa sua capacidade de digitação/datilografia. Você escolhe o idioma e começa a escrever as palvras que são sorteadas para você."
               image="tt.svg"
               url="/tt"
             />

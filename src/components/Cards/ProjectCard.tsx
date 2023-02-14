@@ -19,7 +19,7 @@ export const ProjectCard = ({ description, image, title, url }: Props) => {
       display="flex"
       flexDir="column"
       alignItems="center"
-      justifyContent="center"
+      justifyContent="flex-start"
       borderWidth={1}
       borderColor="transparent"
       borderRadius="lg"
@@ -30,7 +30,13 @@ export const ProjectCard = ({ description, image, title, url }: Props) => {
         borderColor: useColorModeValue("gray.background", "gray.lightCard"),
       }}
     >
-      <Box rounded="lg" w="100%" overflow="hidden">
+      <Box
+        display="flex"
+        justifyContent="center"
+        rounded="lg"
+        w="100%"
+        overflow="hidden"
+      >
         <Image
           src={`/images/projects/${image}`}
           alt={title}

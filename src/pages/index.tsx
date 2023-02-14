@@ -36,7 +36,13 @@ export default function Home() {
 
           <Box mt={6}>
             <HeaderTopic title="Eu" />
-            <Text as="p" fontSize="sm" fontWeight="normal" textAlign="justify">
+            <Text
+              textIndent="2em"
+              as="p"
+              fontSize="sm"
+              fontWeight="normal"
+              textAlign="justify"
+            >
               Sou um desenvolvedor full-stack javascript e typescript e as vezes
               freelancer de Manaus - AM. Conheci a programação na faculdade em
               2018, usando Haskell, C, C++, Python entre outras e iniciei na
@@ -107,7 +113,7 @@ export default function Home() {
                 <a
                   href="https://github.com/filipediaslima"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
                 >
                   <Button
                     bg={"green.sec"}
@@ -128,7 +134,7 @@ export default function Home() {
                 <a
                   href="https://linkedin.com/in/filipediaslima"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
                 >
                   <Button
                     bg={"green.sec"}
@@ -149,7 +155,7 @@ export default function Home() {
                 <a
                   href="https://www.instagram.com/filipe.diaslima/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
                 >
                   <Button
                     bg={"green.sec"}

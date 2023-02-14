@@ -9,7 +9,7 @@ function easeOutCirc(x: number) {
 }
 
 const VoxelRoom = () => {
-  const refContainer = useRef<HTMLDivElement>();
+  const refContainer = useRef<any>();
   const [loading, setLoading] = useState(true);
 
   const handleWindowResize = useCallback(() => {
