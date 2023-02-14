@@ -1,154 +1,188 @@
-import { Button, Flex, Icon, Image, Stack, Text } from "@chakra-ui/react";
-import type { NextPage } from "next";
-import { BackgroundPage } from "../components/BackgroundPage";
-import { RiContactsLine } from "react-icons/ri";
-import { AiOutlineUser } from "react-icons/ai";
-import { BsGrid1X2 } from "react-icons/bs";
-import { useRouter } from "next/router";
+import { MainCard } from "@/components/Cards/MainCard";
+import { HeaderTopic } from "@/components/HeaderTopic";
+import { PageTransition } from "@/components/PageTransition";
+import { Profile } from "@/components/Profile";
+import {
+  Box,
+  Container,
+  HStack,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/layout";
+import { Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaInstagram,
+  FaChevronRight,
+} from "react-icons/fa";
 import Head from "next/head";
+import Router from "next/router";
 
-const Home: NextPage = () => {
-  const router = useRouter();
-
+export default function Home() {
   return (
     <>
       <Head>
-        <title>Filipe Dias</title>
+        <title>Filipe Dias | Home</title>
       </Head>
-      <BackgroundPage
-        w="100vw"
-        minH="100vh"
-        align="center"
-        justify="center"
-        px={{
-          xs: "10%",
-          sm: "10%",
-          md: "12%",
-        }}
-      >
-        <Flex
-          direction={{
-            xs: "column-reverse",
-            sm: "column-reverse",
-            md: "row",
-          }}
-          align="center"
-          w="100%"
-          justify={{
-            xs: "center",
-            sm: "center",
-            md: "space-between",
-          }}
-          mt="20"
-        >
-          <Flex
-            direction="column"
-            mt={{
-              sm: "5",
-              md: "0",
-            }}
-          >
-            <Stack spacing="4">
-              <Text
-                as="b"
-                fontSize={["2xl", "3xl", "3xl", "3xl", "4xl"]}
-                textAlign={{
-                  xs: "center",
-                  sm: "center",
-                  md: "start",
-                }}
-              >
-                Filipe Dias
-              </Text>
-              <Text
-                as="b"
-                fontSize={["lg", "xl", "xl", "xl", "2xl"]}
-                textAlign={{
-                  xs: "center",
-                  sm: "center",
-                  md: "start",
-                }}
-              >
-                Desenvolvedor
-              </Text>
-              <Text
-                as="p"
-                fontSize={["md", "lg"]}
-                maxW={["100%", "300px", "400px", "500px", "600px"]}
-                textAlign="justify"
-              >
-                Olá, sou um desenvolvedor fullstack javascript e typescript.
-                Trabalho com ReactJs e NextJs para Web, NodeJs para backend e
-                React Native para mobile e bancos relacionais e não relacionais.
-              </Text>
-            </Stack>
-          </Flex>
-
-          <Image
-            src="/images/me.jfif"
-            boxSize={["180px", "180px", "200px", "200px", "300px"]}
-            borderRadius={["20", "30"]}
-            border="4px"
-            borderColor="blue.100"
+      <PageTransition>
+        <Container as="main">
+          <MainCard
+            title="Olá, sou um"
+            greenTitle="desenvolvedor mobile e web"
           />
-        </Flex>
+          <Profile />
 
-        <Stack
-          spacing={{
-            xs: 7,
-            md: 20,
-          }}
-          direction={{
-            xs: "column",
-            md: "row",
-          }}
-          alignSelf={{
-            xs: "center",
-            md: "flex-start",
-          }}
-          mt="10"
-          w="100%"
-        >
-          <Button
-            leftIcon={<Icon as={BsGrid1X2} />}
-            bg="blue.100"
-            size="lg"
-            fontWeight="normal"
-            _hover={{
-              bg: "blue.200",
-            }}
-            onClick={() => router.push("/projects")}
+          <Box mt={6}>
+            <HeaderTopic title="Eu" />
+            <Text
+              textIndent="2em"
+              as="p"
+              fontSize="sm"
+              fontWeight="normal"
+              textAlign="justify"
+            >
+              Sou um desenvolvedor full-stack javascript e typescript e as vezes
+              freelancer de Manaus - AM. Conheci a programação na faculdade em
+              2018, usando Haskell, C, C++, Python entre outras e iniciei na
+              área JS em Abril de 2020, estudando enquanto a faculdade estava
+              parada por conta da pandemia, logo em Outubro do mesmo ano,
+              consegui um estágio e atuei em uma empresa Júnior da UFAM, a
+              partir daí passei por outros trabalhos e projetos. Gosto de fazer
+              meus trabalhos com carinho e capricho, sempre focado em aprender e
+              melhorar meus conhecimentos.
+            </Text>
+          </Box>
+
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            my={4}
           >
-            Projetos
-          </Button>
-          <Button
-            leftIcon={<Icon as={AiOutlineUser} />}
-            onClick={() => router.push("/about-me")}
-            bg="blue.100"
-            size="lg"
-            fontWeight="normal"
-            _hover={{
-              bg: "blue.200",
-            }}
-          >
-            Sobre mim
-          </Button>
-          <Button
-            leftIcon={<Icon as={RiContactsLine} />}
-            bg="blue.100"
-            size="lg"
-            fontWeight="normal"
-            _hover={{
-              bg: "blue.200",
-            }}
-            onClick={() => router.push("/contact")}
-          >
-            Contatos
-          </Button>
-        </Stack>
-      </BackgroundPage>
+            <Button
+              alignSelf="center"
+              bg={"green.sec"}
+              size="md"
+              fontWeight="normal"
+              rightIcon={<FaChevronRight fontSize={10} />}
+              color={useColorModeValue("gray.font", "white")}
+              _hover={{
+                bg: "green.main",
+              }}
+              onClick={() => Router.push("/projects")}
+            >
+              Projetos
+            </Button>
+          </Box>
+
+          <Box mt={6}>
+            <HeaderTopic title="Experiências" />
+
+            <Box fontWeight="normal" mt={1}>
+              <Text as="strong" fontSize="sm" mr={6}>
+                2020 - 2021
+              </Text>
+              Coltech
+            </Box>
+            <Box fontWeight="normal" mt={1}>
+              <Text as="strong" fontSize="sm" mr={6}>
+                2020 - 2021
+              </Text>
+              Estágio na Eu Vô
+            </Box>
+            <Box fontWeight="normal" mt={1}>
+              <Text as="strong" fontSize="sm" mr={6}>
+                2018 até hoje
+              </Text>
+              Ciência da Computação na Universidade Federal do Amazonas (UFAM)
+            </Box>
+            <Box fontWeight="normal" mt={1}>
+              <Text as="strong" fontSize="sm" mr={6}>
+                2021 - Atualmente
+              </Text>
+              Desenvolvedor Full-Stack na Tarkuss Brasil
+            </Box>
+          </Box>
+
+          <Box mt={6}>
+            <HeaderTopic title="Contatos" />
+            <List spacing={2}>
+              <ListItem>
+                <a
+                  href="https://github.com/filipediaslima"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button
+                    bg={"green.sec"}
+                    size="sm"
+                    fontWeight="normal"
+                    leftIcon={<FaGithub />}
+                    color={useColorModeValue("gray.font", "white")}
+                    _hover={{
+                      bg: "green.main",
+                    }}
+                  >
+                    @filipediaslima
+                  </Button>
+                </a>
+              </ListItem>
+
+              <ListItem>
+                <a
+                  href="https://linkedin.com/in/filipediaslima"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button
+                    bg={"green.sec"}
+                    size="sm"
+                    fontWeight="normal"
+                    leftIcon={<FaLinkedinIn />}
+                    color={useColorModeValue("gray.font", "white")}
+                    _hover={{
+                      bg: "green.main",
+                    }}
+                  >
+                    @filipediaslima
+                  </Button>
+                </a>
+              </ListItem>
+
+              <ListItem>
+                <a
+                  href="https://www.instagram.com/filipe.diaslima/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button
+                    bg={"green.sec"}
+                    size="sm"
+                    fontWeight="normal"
+                    leftIcon={<FaInstagram />}
+                    color={useColorModeValue("gray.font", "white")}
+                    _hover={{
+                      bg: "green.main",
+                    }}
+                  >
+                    @filipe.diaslima
+                  </Button>
+                </a>
+              </ListItem>
+            </List>
+          </Box>
+
+          <Box mt={6}>
+            <HeaderTopic title="Hobbies" />
+            <Text as="p" fontSize="sm" fontWeight="normal" textAlign="justify">
+              Jogar e sair com meus amigos, assistir filmes, treinar durante a
+              semana e aprender coisas novas.
+            </Text>
+          </Box>
+        </Container>
+      </PageTransition>
     </>
   );
-};
-
-export default Home;
+}

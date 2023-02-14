@@ -1,111 +1,110 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  Image,
-  Link,
-  Text,
-  useBreakpointValue,
-  VStack,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { MainCard } from "@/components/Cards/MainCard";
+import { Meta } from "@/components/Meta";
+import { PageTransition } from "@/components/PageTransition";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { Box, Container, Image, List, ListItem, Text } from "@chakra-ui/react";
 import Head from "next/head";
-import NextLink from "next/link";
-import { BackgroundPage } from "../../components/BackgroundPage";
-import { CardImageProject } from "../../components/CardImageProject";
-import { TopImagesProject } from "../../components/TopImagesProject";
+import Link from "next/link";
 
-export default function Project() {
-  const isMobile = useBreakpointValue({
-    base: true,
-    lg: false,
-  });
-
+const GGstore = () => {
   return (
     <>
       <Head>
-        <title>Filipe Dias | Projetos - GGSTORE</title>
+        <title>Filipe Dias | GGstore</title>
       </Head>
-      <BackgroundPage
-        showHeader={true}
-        align="center"
-        justify="center"
-        px={["10%", "12%"]}
-        w="100%"
-        minH="100vh"
-        flexDir={["column"]}
-        justifyContent={"space-evenly"}
-      >
-        <Image
-          src="/images/ggstore.png"
-          objectFit={"cover"}
-          boxSize={"220"}
-          borderRadius={"20"}
-          position={"relative"}
-          top={20}
-          my={20}
-          boxShadow="dark-lg"
-        />
-        <Divider colorScheme={"whiteAlpha"} borderColor={"none"} my={20} />
-        <Flex flexDir={"column"} w={"90%"} alignItems="center">
-          {!isMobile && (
-            <TopImagesProject
-              src1="/images/ggstore3.png"
-              src2="/images/ggstore2.png"
-              src3="/images/ggstore1.png"
-              isApp={false}
-            />
-          )}
-
-          <Text
-            mt={{ sm: 4, md: 10 }}
-            w={{ sm: "95%", md: "85%" }}
-            textAlign={"center"}
-          >
-            Este projeto foi desenvolvido para ser uma loja online de jogos
-            virtuais, a loja se basea na venda de keys dos jogos disponiveis.
-            Conta com um administrado para cadastrar novos produtos com imagens
-            e descrição e conta com um usuário comum, que será o comprador. É
-            possível adicionar um jogo no carrinho e nos favoritos, logar na
-            plataforma, usando cookies do navegador, um backend e um banco de
-            dados. O código e as tecnologias do projeto estão no meu repositório
-            do github, o link está ao final desta página.
-          </Text>
-          <Wrap spacing="40px" align={"center"} justify={"center"} mt={10}>
-            <WrapItem>
-              <CardImageProject src={"/images/ggstore1.png"} title="inicio" />
-            </WrapItem>
-            <WrapItem>
-              <CardImageProject src={"/images/ggstore2.png"} title="loja" />
-            </WrapItem>
-            <WrapItem>
-              <CardImageProject
-                src={"/images/ggstore3.png"}
-                title="biblioteca"
-              />
-            </WrapItem>
-            <WrapItem>
-              <CardImageProject
-                src={"/images/ggstore4.png"}
-                title="detalhes do jogo"
-              />
-            </WrapItem>
-          </Wrap>
-        </Flex>
-        <Divider colorScheme={"whiteAlpha"} borderColor={"none"} my={16} />
-        <VStack w="100%" mb={16} spacing={4}>
-          <Text>Código fonte do projeto</Text>
-          <Box bg="white.100" w="60px" h="60px" borderRadius={6} p="1">
-            <Image src="/images/github.png" />
+      <PageTransition>
+        <Container as="main">
+          <MainCard title="GG" greenTitle="store" />
+          <Box mt={6}>
+            <Text
+              fontWeight="normal"
+              fontSize="sm"
+              textIndent="2em"
+              textAlign="justify"
+            >
+              Este projeto foi desenvolvido para ser uma loja online de jogos
+              virtuais, a loja se basea na venda de keys dos jogos disponiveis.
+              Conta com um administrado para cadastrar novos produtos com
+              imagens e descrição e conta com um usuário comum, que será o
+              comprador. É possível adicionar um jogo no carrinho e nos
+              favoritos, logar na plataforma, usando cookies do navegador, um
+              backend e um banco de dados. O código e as tecnologias do projeto
+              estão no meu repositório do github, o link está ao final desta
+              página.
+            </Text>
           </Box>
-          <NextLink href="https://github.com/FilipeDiasLima/GGStore" passHref>
-            <Link target="_blank" rel="noopener noreferrer">
-              https://github.com/FilipeDiasLima/GGStore
-            </Link>
-          </NextLink>
-        </VStack>
-      </BackgroundPage>
+          <List ml={4} my={4} spacing={1}>
+            <ListItem
+              fontSize="sm"
+              display="flex"
+              flexDir="row"
+              alignItems="center"
+            >
+              <Meta>Post</Meta>
+              <Link
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/posts/filipediaslima_javascript-frontend-typescript-activity-6987149814052360192-c8I_?utm_source=share&utm_medium=member_desktop"
+              >
+                <Text
+                  textDecoration="underline"
+                  textUnderlineOffset={4}
+                  textDecorationColor="green.main"
+                >
+                  GGstore linkedin
+                </Text>
+              </Link>
+              <ExternalLinkIcon mx="2px" color="green.main" />
+            </ListItem>
+
+            <ListItem
+              fontSize="sm"
+              display="flex"
+              flexDir="row"
+              alignItems="center"
+            >
+              <Meta>Plataformas</Meta>
+              <Text>Web</Text>
+            </ListItem>
+
+            <ListItem
+              fontSize="sm"
+              display="flex"
+              flexDir="row"
+              alignItems="center"
+            >
+              <Meta>Stack</Meta>
+              <Text>
+                React Js, Node Js, Sequelize, PostegreSQL, Typescript e Docker.
+              </Text>
+            </ListItem>
+          </List>
+
+          <Image
+            borderRadius="lg"
+            w="full"
+            src="/images/projects/ggstore2.png"
+            alt=""
+            mb={4}
+          />
+          <Image
+            borderRadius="lg"
+            w="full"
+            src="/images/projects/ggstore3.png"
+            alt=""
+            mb={4}
+          />
+          <Image
+            borderRadius="lg"
+            w="full"
+            src="/images/projects/ggstore4.png"
+            alt=""
+            mb={4}
+          />
+        </Container>
+      </PageTransition>
     </>
   );
-}
+};
+
+export default GGstore;
