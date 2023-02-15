@@ -7,7 +7,7 @@ interface Props {
 export const HeaderTopic = ({ title }: Props) => {
   return (
     <Heading
-      fontSize="md"
+      fontSize="xl"
       textDecoration="underline"
       textUnderlineOffset={6}
       textDecorationColor="green.main"

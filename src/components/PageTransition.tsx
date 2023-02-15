@@ -15,7 +15,7 @@ export const PageTransition = ({ children }: Props) => {
       exit="exit"
       variants={variants}
       transition={{ duration: 0.4, type: "easeInOut" }}
-      style={{ position: "relative" }}
+      style={{ position: "relative", width: "100%" }}
     >
       {children}
     </motion.article>

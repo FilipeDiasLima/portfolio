@@ -21,12 +21,12 @@ const SimpleNote = () => {
         <title>Filipe Dias | SimpleNote</title>
       </Head>
       <PageTransition>
-        <Container as="main">
+        <Container as="main" maxW="80%">
           <MainCard title="Simple" greenTitle="Note" />
           <Box mt={6}>
             <Text
               fontWeight="normal"
-              fontSize="sm"
+              fontSize="lg"
               textIndent="2em"
               textAlign="justify"
             >
@@ -38,9 +38,9 @@ const SimpleNote = () => {
               desta página.
             </Text>
           </Box>
-          <List ml={4} my={4} spacing={1}>
+          <List ml={[0, 0, 4]} my={4} spacing={1}>
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
@@ -54,6 +54,7 @@ const SimpleNote = () => {
                 <Text
                   textDecoration="underline"
                   textUnderlineOffset={4}
+                  fontSize="lg"
                   textDecorationColor="green.main"
                 >
                   SimpleNote github
@@ -63,23 +64,23 @@ const SimpleNote = () => {
             </ListItem>
 
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
             >
               <Meta>Plataformas</Meta>
-              <Text>iOS e Android</Text>
+              <Text fontSize="lg">iOS e Android</Text>
             </ListItem>
 
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
             >
               <Meta>Stack</Meta>
-              <Text>
+              <Text fontSize="lg">
                 React Native ,Expo, AsyncStorage, React-Navigation/Stack
               </Text>
             </ListItem>
@@ -89,7 +90,7 @@ const SimpleNote = () => {
             <Image
               src="/images/projects/simplenote1.png"
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               alt=""
               mb={4}
               bg="transparent"
@@ -97,7 +98,7 @@ const SimpleNote = () => {
             />
             <Image
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               src="/images/projects/simplenote2.png"
               alt=""
               mb={4}
@@ -107,7 +108,7 @@ const SimpleNote = () => {
             <Image
               src="/images/projects/simplenote3.png"
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               alt=""
               mb={4}
               bg="transparent"
@@ -115,7 +116,7 @@ const SimpleNote = () => {
             />
             <Image
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               src="/images/projects/simplenote4.png"
               alt=""
               mb={4}

@@ -22,6 +22,7 @@ export const LinkItem = ({ href, children, ...rest }: LinkItemProps) => {
       href={href}
       scroll={false}
       prefetch={false}
+      fontSize="lg"
       _hover={{ textDecor: "none" }}
       {...rest}
     >
@@ -49,7 +50,7 @@ export const MainLink = ({ href, ...rest }: LinkItemProps) => {
       prefetch={false}
       _hover={{ textDecor: "none" }}
       fontWeight="bold"
-      fontSize="lg"
+      fontSize="xl"
       {...rest}
     >
       Filipe Dias

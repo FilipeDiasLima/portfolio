@@ -21,12 +21,12 @@ const IgniteGym = () => {
         <title>Filipe Dias | IgniteGym</title>
       </Head>
       <PageTransition>
-        <Container as="main">
+        <Container as="main" maxW="80%">
           <MainCard title="Ignite" greenTitle="Gym" />
           <Box mt={6}>
             <Text
               fontWeight="normal"
-              fontSize="sm"
+              fontSize="lg"
               textIndent="2em"
               textAlign="justify"
             >
@@ -35,9 +35,9 @@ const IgniteGym = () => {
               da sua maneira e é registrado em histórico todo o seu progresso.
             </Text>
           </Box>
-          <List ml={4} my={4} spacing={1}>
+          <List ml={[0, 0, 4]} my={4} spacing={1}>
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
@@ -51,6 +51,7 @@ const IgniteGym = () => {
                 <Text
                   textDecoration="underline"
                   textUnderlineOffset={4}
+                  fontSize="lg"
                   textDecorationColor="green.main"
                 >
                   IgniteGym linkedin
@@ -60,23 +61,23 @@ const IgniteGym = () => {
             </ListItem>
 
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
             >
               <Meta>Plataformas</Meta>
-              <Text>iOS e Android</Text>
+              <Text fontSize="lg">iOS e Android</Text>
             </ListItem>
 
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
             >
               <Meta>Stack</Meta>
-              <Text>
+              <Text fontSize="lg">
                 React Native, Expo, Native Base, NodeJS, Sqlite3 e Typescript
               </Text>
             </ListItem>
@@ -86,7 +87,7 @@ const IgniteGym = () => {
             <Image
               src="/images/projects/ignite1.png"
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               alt=""
               mb={4}
               bg="transparent"
@@ -94,7 +95,7 @@ const IgniteGym = () => {
             />
             <Image
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               src="/images/projects/ignite2.png"
               alt=""
               mb={4}
@@ -104,7 +105,7 @@ const IgniteGym = () => {
             <Image
               src="/images/projects/ignite3.png"
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               alt=""
               mb={4}
               bg="transparent"
@@ -112,7 +113,7 @@ const IgniteGym = () => {
             />
             <Image
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               src="/images/projects/ignite4.png"
               alt=""
               mb={4}
@@ -121,7 +122,7 @@ const IgniteGym = () => {
             />
             <Image
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               src="/images/projects/ignite5.png"
               alt=""
               mb={4}
@@ -130,7 +131,7 @@ const IgniteGym = () => {
             />
             <Image
               objectFit="cover"
-              maxW={[140, 200]}
+              maxW={[120, 140, 240]}
               src="/images/projects/ignite6.png"
               alt=""
               mb={4}

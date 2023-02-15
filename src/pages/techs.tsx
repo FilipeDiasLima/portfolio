@@ -12,7 +12,7 @@ const Techs = () => {
         <title>Filipe Dias | Minhas Techs</title>
       </Head>
       <PageTransition>
-        <Container as="main">
+        <Container as="main" maxW="80%">
           <MainCard
             title="Meus projetos são feitos com essas"
             greenTitle="techs"
@@ -26,10 +26,10 @@ const Techs = () => {
                 w={200}
                 h={120}
               />
-              <Text fontSize="md" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 React Js
               </Text>
-              <Text fontSize="sm">Web</Text>
+              <Text fontSize="md">Web</Text>
             </VStack>
 
             <VStack alignItems="center">
@@ -40,10 +40,10 @@ const Techs = () => {
                 w={200}
                 h={120}
               />
-              <Text fontSize="md" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 Next Js
               </Text>
-              <Text fontSize="sm">Web</Text>
+              <Text fontSize="md">Web</Text>
             </VStack>
 
             <VStack alignItems="center">
@@ -54,10 +54,10 @@ const Techs = () => {
                 w={200}
                 h={120}
               />
-              <Text fontSize="md" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 React Native
               </Text>
-              <Text fontSize="sm">iOS e Android</Text>
+              <Text fontSize="md">iOS e Android</Text>
             </VStack>
 
             <VStack alignItems="center">
@@ -68,10 +68,10 @@ const Techs = () => {
                 w={200}
                 h={120}
               />
-              <Text fontSize="md" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 Node JS
               </Text>
-              <Text fontSize="sm">API e Backend</Text>
+              <Text fontSize="md">API e Backend</Text>
             </VStack>
 
             <VStack alignItems="center">
@@ -82,10 +82,10 @@ const Techs = () => {
                 w={200}
                 h={120}
               />
-              <Text fontSize="md" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 Expo
               </Text>
-              <Text fontSize="sm">iOS e Android</Text>
+              <Text fontSize="md">iOS e Android</Text>
             </VStack>
 
             <VStack alignItems="center">
@@ -96,10 +96,10 @@ const Techs = () => {
                 w={200}
                 h={120}
               />
-              <Text fontSize="md" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 Figma
               </Text>
-              <Text fontSize="sm">Design</Text>
+              <Text fontSize="md">Design</Text>
             </VStack>
           </SimpleGrid>
         </Container>

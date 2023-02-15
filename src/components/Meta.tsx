@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const Meta = ({ children }: Props) => (
-  <Badge colorScheme="green" mr={2} fontSize="xs">
+  <Badge colorScheme="green" mr={2} fontSize="sm">
     {children}
   </Badge>
 );
