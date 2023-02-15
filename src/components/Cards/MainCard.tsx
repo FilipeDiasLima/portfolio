@@ -11,11 +11,12 @@ export const MainCard = ({ title, greenTitle }: Props) => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      flexDir="row"
+      flexDir={["column", "row", "row"]}
       bg={useColorModeValue("gray.lightCard", "gray.card")}
-      p={3}
+      p={4}
       rounded="md"
       boxShadow="lg"
+      fontSize={["md", "md", "lg"]}
     >
       <Text color={useColorModeValue("gray.font", "white")}>{title}</Text>
       <Text ml={1} color="green.main">

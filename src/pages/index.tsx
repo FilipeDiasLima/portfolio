@@ -27,7 +27,7 @@ export default function Home() {
         <title>Filipe Dias | Home</title>
       </Head>
       <PageTransition>
-        <Container as="main">
+        <Container as="main" maxW="80%">
           <MainCard
             title="Olá, sou um"
             greenTitle="desenvolvedor mobile e web"
@@ -39,19 +39,19 @@ export default function Home() {
             <Text
               textIndent="2em"
               as="p"
-              fontSize="sm"
+              fontSize="lg"
               fontWeight="normal"
               textAlign="justify"
             >
               Sou um desenvolvedor full-stack javascript e typescript e as vezes
-              freelancer de Manaus - AM. Conheci a programação na faculdade em
-              2018, usando Haskell, C, C++, Python entre outras e iniciei na
-              área JS em Abril de 2020, estudando enquanto a faculdade estava
-              parada por conta da pandemia, logo em Outubro do mesmo ano,
-              consegui um estágio e atuei em uma empresa Júnior da UFAM, a
-              partir daí passei por outros trabalhos e projetos. Gosto de fazer
-              meus trabalhos com carinho e capricho, sempre focado em aprender e
-              melhorar meus conhecimentos.
+              freelancer, moro em Manaus - AM. Conheci a programação na
+              faculdade em 2018, usando Haskell, C, C++, Python entre outras e
+              iniciei na área JS em Abril de 2020, estudando enquanto a
+              faculdade estava parada por conta da pandemia. Logo em Outubro do
+              mesmo ano, consegui um estágio e atuei em uma empresa Júnior da
+              UFAM, a partir daí passei por outros trabalhos e projetos. Gosto
+              de fazer meus trabalhos com carinho e capricho, sempre focado em
+              aprender e melhorar meus conhecimentos.
             </Text>
           </Box>
 
@@ -66,7 +66,8 @@ export default function Home() {
               bg={"green.sec"}
               size="md"
               fontWeight="normal"
-              rightIcon={<FaChevronRight fontSize={10} />}
+              fontSize="lg"
+              rightIcon={<FaChevronRight fontSize={12} />}
               color={useColorModeValue("gray.font", "white")}
               _hover={{
                 bg: "green.main",
@@ -80,26 +81,26 @@ export default function Home() {
           <Box mt={6}>
             <HeaderTopic title="Experiências" />
 
-            <Box fontWeight="normal" mt={1}>
-              <Text as="strong" fontSize="sm" mr={6}>
+            <Box fontWeight="normal" mt={1} fontSize="lg">
+              <Text as="strong" fontSize="lg" mr={6}>
                 2020 - 2021
               </Text>
               Coltech
             </Box>
-            <Box fontWeight="normal" mt={1}>
-              <Text as="strong" fontSize="sm" mr={6}>
+            <Box fontWeight="normal" mt={1} fontSize="lg">
+              <Text as="strong" fontSize="lg" mr={6}>
                 2020 - 2021
               </Text>
               Estágio na Eu Vô
             </Box>
-            <Box fontWeight="normal" mt={1}>
-              <Text as="strong" fontSize="sm" mr={6}>
+            <Box fontWeight="normal" mt={1} fontSize="lg">
+              <Text as="strong" fontSize="lg" mr={6}>
                 2018 até hoje
               </Text>
               Ciência da Computação na Universidade Federal do Amazonas (UFAM)
             </Box>
-            <Box fontWeight="normal" mt={1}>
-              <Text as="strong" fontSize="sm" mr={6}>
+            <Box fontWeight="normal" mt={1} fontSize="lg">
+              <Text as="strong" fontSize="lg" mr={6}>
                 2021 - Atualmente
               </Text>
               Desenvolvedor Full-Stack na Tarkuss Brasil
@@ -118,6 +119,8 @@ export default function Home() {
                   <Button
                     bg={"green.sec"}
                     size="sm"
+                    fontSize="lg"
+                    py={5}
                     fontWeight="normal"
                     leftIcon={<FaGithub />}
                     color={useColorModeValue("gray.font", "white")}
@@ -139,6 +142,8 @@ export default function Home() {
                   <Button
                     bg={"green.sec"}
                     size="sm"
+                    fontSize="lg"
+                    py={5}
                     fontWeight="normal"
                     leftIcon={<FaLinkedinIn />}
                     color={useColorModeValue("gray.font", "white")}
@@ -160,6 +165,8 @@ export default function Home() {
                   <Button
                     bg={"green.sec"}
                     size="sm"
+                    fontSize="lg"
+                    py={5}
                     fontWeight="normal"
                     leftIcon={<FaInstagram />}
                     color={useColorModeValue("gray.font", "white")}
@@ -176,7 +183,7 @@ export default function Home() {
 
           <Box mt={6}>
             <HeaderTopic title="Hobbies" />
-            <Text as="p" fontSize="sm" fontWeight="normal" textAlign="justify">
+            <Text as="p" fontSize="lg" fontWeight="normal" textAlign="justify">
               Jogar e sair com meus amigos, assistir filmes, treinar durante a
               semana e aprender coisas novas.
             </Text>

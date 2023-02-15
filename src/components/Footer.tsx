@@ -7,7 +7,7 @@ const Footer = () => {
       alignItems="center"
       justifyContent="center"
       opacity={0.4}
-      fontSize="sm"
+      fontSize="md"
       pt={10}
     >
       &copy; {new Date().getFullYear()} Filipe Dias. Todos os direitos

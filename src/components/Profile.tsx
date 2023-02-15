@@ -11,8 +11,8 @@ export const Profile = () => {
           size="lg"
         />
         <VStack alignItems="flex-start" spacing={0}>
-          <Heading fontSize="md">Filipe Dias</Heading>
-          <Text fontSize="sm">Desenvolvedor (WEB, MOBILE, BACKEND)</Text>
+          <Heading fontSize="xl">Filipe Dias</Heading>
+          <Text fontSize="lg">Desenvolvedor (WEB, MOBILE, BACKEND)</Text>
         </VStack>
       </HStack>
     </Box>

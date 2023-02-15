@@ -33,7 +33,7 @@ export const NavBar = () => {
       >
         <MainLink href="/" mr={10} />
         <HStack
-          display={{ base: "none", sm: "flex" }}
+          display={{ base: "none", md: "flex" }}
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}

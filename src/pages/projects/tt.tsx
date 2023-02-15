@@ -13,12 +13,12 @@ const TT = () => {
         <title>Filipe Dias | TypingText</title>
       </Head>
       <PageTransition>
-        <Container as="main">
+        <Container as="main" maxW="80%">
           <MainCard title="Typing" greenTitle="Text" />
           <Box mt={6}>
             <Text
               fontWeight="normal"
-              fontSize="sm"
+              fontSize="lg"
               textIndent="2em"
               textAlign="justify"
             >
@@ -33,9 +33,9 @@ const TT = () => {
               repositório do github, o link está ao final desta página.
             </Text>
           </Box>
-          <List ml={4} my={4} spacing={1}>
+          <List ml={[0, 0, 4]} my={4} spacing={1}>
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
@@ -49,6 +49,7 @@ const TT = () => {
                 <Text
                   textDecoration="underline"
                   textUnderlineOffset={4}
+                  fontSize="lg"
                   textDecorationColor="green.main"
                 >
                   TypingText github
@@ -58,23 +59,23 @@ const TT = () => {
             </ListItem>
 
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
             >
               <Meta>Plataformas</Meta>
-              <Text>Web</Text>
+              <Text fontSize="lg">Web</Text>
             </ListItem>
 
             <ListItem
-              fontSize="sm"
+              fontSize="md"
               display="flex"
               flexDir="row"
               alignItems="center"
             >
               <Meta>Stack</Meta>
-              <Text>Typescript, React, Cookie, ChartJS</Text>
+              <Text fontSize="lg">Typescript, React, Cookie, ChartJS</Text>
             </ListItem>
           </List>
 

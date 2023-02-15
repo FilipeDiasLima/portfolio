@@ -12,7 +12,7 @@ const Projects = () => {
         <title>Filipe Dias | Projetos</title>
       </Head>
       <PageTransition>
-        <Container as="main">
+        <Container as="main" maxW="80%">
           <MainCard title="Alguns dos meus" greenTitle="projetos" />
 
           <SimpleGrid columns={[1, 1, 2]} gap={4} mt={6}>

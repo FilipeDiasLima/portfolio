@@ -50,10 +50,10 @@ export const ProjectCard = ({ description, image, title, url }: Props) => {
           }}
         />
       </Box>
-      <Text mt={2} textAlign="center" fontWeight="bold" fontSize="md">
+      <Text mt={2} textAlign="center" fontWeight="bold" fontSize="xl">
         {title}
       </Text>
-      <Text mt={2} textAlign="center" fontWeight="normal" fontSize="xs">
+      <Text mt={2} textAlign="center" fontWeight="normal" fontSize="md">
         {description}
       </Text>
     </Box>
