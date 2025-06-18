@@ -1,6 +1,5 @@
 import { MainCard } from "@/components/Cards/MainCard";
 import { ProjectCard } from "@/components/Cards/ProjectCard";
-import { DivTransition } from "@/components/DivTransition";
 import { PageTransition } from "@/components/PageTransition";
 import { Container, SimpleGrid } from "@chakra-ui/layout";
 import Head from "next/head";
@@ -16,6 +15,12 @@ const Projects = () => {
           <MainCard title="Alguns dos meus" greenTitle="projetos" />
 
           <SimpleGrid columns={[1, 1, 2]} gap={4} mt={6}>
+            <ProjectCard
+              title="Balatro Game"
+              description="Balatro é um jogo de cartas muito famoso, onde você deve escolher as cartas certas para vencer o jogo."
+              image="balatro.png"
+              url="/balatro"
+            />
             <ProjectCard
               title="Airbnb"
               description="Plataforma clone da Airbnb, empresa para você alugar os melhores lugares para temporadas, viagens e férias."
